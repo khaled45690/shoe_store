@@ -19,9 +19,11 @@ class MainActivity : AppCompatActivity() {
 
 
         val navController = findNavController(R.id.nav_host_fragment_activity_main)
+
+        // this app configuration to prevent the back button from appearing
         val appBarConfiguration = AppBarConfiguration(
             setOf(
-                R.id.loginFragment, R.id.fragmentWelcome, R.id.shoeListFragment , R.id.addShoe
+                R.id.loginFragment, R.id.fragmentWelcome, R.id.shoeListFragment , R.id.addShoe , R.id.instructionFragment
             )
         )
 

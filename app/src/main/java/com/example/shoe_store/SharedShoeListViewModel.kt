@@ -9,7 +9,8 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.example.shoe_store.model.ShoeItem
 
-
+// this is a shared model through out the activity
+// to maintaine data through out fragment easier
 class SharedShoeListViewModel : ViewModel() {
     private val shoe1 : ShoeItem = ShoeItem("adidas27" , "adidas" , "44" , "adidas shoeses")
     private val shoe2 : ShoeItem = ShoeItem("adidas57" , "adidas" , "48" , "adidas shoeses")
@@ -23,13 +24,11 @@ class SharedShoeListViewModel : ViewModel() {
 
 
 
-    fun addItem(shoeName: String , companyName: String , shoeSize: String , describtion: String) {
+    fun addItem(shoeName: String, companyName: String, shoeSize: String, description: String) {
 
-        val shoeItem : ShoeItem = ShoeItem(shoeName , companyName, shoeSize , describtion)
-//        _shoeList.value?.plus(shoeItem)
+        val shoeItem : ShoeItem = ShoeItem(shoeName , companyName, shoeSize , description)
         _shoeList.apply {
             value = shoeList.value?.plus(shoeItem)
-            println(value!!.size)
         }
         println(_shoeList.value!!.size)
     }

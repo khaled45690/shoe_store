@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--here we frame layout for one good reason to make the floating button above the product cards and give stativ effects
 
+also used constraint layout to position the floating button
+the linear layout is the view that we add the items to it by looping in the shoeListFragment
+ -->
 <LinearLayout
 xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"

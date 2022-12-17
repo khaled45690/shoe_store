@@ -1,4 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--here we used constraintlayout to reduce the complexity of positioning the UI components
+
+used Imageview to add some nice visuals  but there is not much work here
+
+just navigation button-->
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"

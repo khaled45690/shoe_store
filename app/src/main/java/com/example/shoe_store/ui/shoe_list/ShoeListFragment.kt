@@ -33,14 +33,13 @@ class ShoeListFragment : Fragment() {
 
         _binding = FragmentShoeListBinding.inflate(inflater, container, false)
         setHasOptionsMenu(true)
-
+            // this to show the predefined shoe items
         sharedShoeListViewModel.shoeList.value?.forEach { shoeItem ->
-            println("khaled")
             val cardBinder =  CardViewBinding.inflate(inflater, container, false)
             cardBinder.shoeItem = shoeItem
             binding.customLayout.addView(cardBinder.root)
         }
-
+        // this to add navigation to floating action button
         binding.addItem.setOnClickListener{view->
             view.findNavController().navigate(R.id.addShoe)
         }
@@ -56,7 +55,7 @@ class ShoeListFragment : Fragment() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
 
         requireView().findNavController().navigate(R.id.loginFragment)
-        return NavigationUI.onNavDestinationSelected(item!! ,requireView().findNavController() ) || super.onOptionsItemSelected(item)
+        return NavigationUI.onNavDestinationSelected(item ,requireView().findNavController() )
     }
     override fun onDestroyView() {
         super.onDestroyView()

@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+<!--here we used constraintlayout to reduce the complexity of positioning the UI components-->
 <androidx.constraintlayout.widget.ConstraintLayout
     android:id="@+id/loginFragment"
     xmlns:android="http://schemas.android.com/apk/res/android"

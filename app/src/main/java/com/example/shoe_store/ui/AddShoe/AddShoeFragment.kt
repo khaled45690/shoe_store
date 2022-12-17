@@ -35,8 +35,8 @@ class AddShoeFragment : Fragment() {
             val shoeName : String = _binding!!.shoeNameTextField.text.toString()
             val shoeSize : String = _binding!!.shoeSizetextField.text.toString()
             val companyName : String = _binding!!.companyNameTextField.text.toString()
-            val describtion : String = _binding!!.descriptionTextField.text.toString()
-            if(shoeName.isNullOrBlank() ||shoeSize.isNullOrBlank() || companyName.isNullOrBlank() || describtion.isNullOrBlank()) {
+            val description : String = _binding!!.descriptionTextField.text.toString()
+            if(shoeName.isNullOrBlank() ||shoeSize.isNullOrBlank() || companyName.isNullOrBlank() || description.isNullOrBlank()) {
                 Snackbar.make(
                     view,
                     "please make sure you full fill all text fields",
@@ -46,7 +46,7 @@ class AddShoeFragment : Fragment() {
                     .setActionTextColor(resources.getColor(android.R.color.holo_red_light))
                     .show()
             }else{
-                sharedShoeListViewModel.addItem(shoeName , companyName , shoeSize , describtion)
+                sharedShoeListViewModel.addItem(shoeName , companyName , shoeSize , description)
                 _binding!!.invalidateAll()
                 view.findNavController().navigate(R.id.shoeListFragment)
             }
