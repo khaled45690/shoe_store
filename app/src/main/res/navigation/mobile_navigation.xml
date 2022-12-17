@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/loginFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.shoe_store.ui.login.LoginFragment"
+        android:label="@string/title_login"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_loginFragment_to_fragmentWelcome"
+            app:destination="@id/fragmentWelcome" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragmentWelcome"
+        android:name="com.example.shoe_store.ui.welcome.WelcomeFragment"
+        android:label="@string/title_Welcome"
+        tools:layout="@layout/fragment_welcome">
+        <action
+            android:id="@+id/action_fragmentWelcome_to_instructionFragment"
+            app:destination="@id/instructionFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/shoeListFragment"
+        android:name="com.example.shoe_store.ui.shoe_list.ShoeListFragment"
+        android:label="@string/title_shoeList"
+        tools:layout="@layout/fragment_shoe_list">
+        <action
+            android:id="@+id/action_shoeListFragment_to_logout"
+            app:destination="@id/addShoe" />
+        <action
+            android:id="@+id/action_shoeListFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addShoe"
+        android:name="com.example.shoe_store.ui.AddShoe.AddShoeFragment"
+        android:label="Add shoe"
+        tools:layout="@layout/fragment_add_shoe">
+        <action
+            android:id="@+id/action_logout_to_shoeListFragment"
+            app:destination="@id/shoeListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/instructionFragment"
+        android:name="com.example.shoe_store.ui.Instruction.InstructionFragment"
+        android:label="fragment_instruction"
+        tools:layout="@layout/fragment_instruction" >
+        <action
+            android:id="@+id/action_instructionFragment_to_shoeListFragment"
+            app:destination="@id/shoeListFragment" />
+    </fragment>
+</navigation>

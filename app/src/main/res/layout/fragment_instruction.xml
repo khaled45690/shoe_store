@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.Instruction.InstructionFragment">
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="426dp"
+        android:layout_height="210dp"
+        android:layout_marginBottom="544dp"
+        android:adjustViewBounds="true"
+        android:src="@mipmap/instruction_image"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.533"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Here are simple instructions"
+        android:textSize="25sp"
+        android:textFontWeight="700"
+        app:layout_constraintBottom_toTopOf="@+id/textView7"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2"
+        app:layout_constraintVertical_bias="0.506" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="374dp"
+        android:layout_height="176dp"
+        android:text="@string/you_are_about_to_see_list_of_shoes_to_add_a_new_shoe_please_click_the_floating_button_if_you_logout_you_have_three_dots_at_the_top_right_corner_click_them_to_be_able_to_see_the_logout_button"
+        android:textFontWeight="700"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toTopOf="@+id/navigaorButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.432"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2"
+        app:layout_constraintVertical_bias="0.32" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="379dp"
+        android:layout_height="19dp"
+        android:text="@string/to_continue_please_press_the_button_down_there"
+        android:textFontWeight="700"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/navigaorButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView7"
+        app:layout_constraintVertical_bias="0.57" />
+
+    <Button
+        android:id="@+id/navigaorButton"
+        android:layout_width="211dp"
+        android:layout_height="56dp"
+        android:layout_marginBottom="100dp"
+        android:text="@string/go_to_shoe_list"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.445"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

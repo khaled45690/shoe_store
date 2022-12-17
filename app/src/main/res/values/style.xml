@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="ButtonStyle" id="buttonStyle">
+        <item name="android:layout_width">100dp</item>
+        <item name="android:layout_height">200dp</item>
+        <item name="android:text">generated style</item>
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:colorAccent">@color/purple_200</item>
+    </style>
+
+    <style name="LinearLayoutStyle" >
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">15dp</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+</resources>

@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">shoe store</string>
+    <string name="title_login">Login</string>
+    <string name="title_add_shoe">add new shoe</string>
+    <string name="title_Welcome">Welcome</string>
+    <string name="title_shoeList">ShowList Screen</string>
+    <string name="login_screen">Login</string>
+    <string name="sign_in">Sign In</string>
+    <string name="dont_have_account">Don\'t have account click here</string>
+    <string name="password">Password</string>
+    <string name="email">Email</string>
+    <string name="please_enter_your_email_address">please enter your email address</string>
+    <string name="please_enter_your_password">please enter your password</string>
+    <string name="welcome_image">Welcome image</string>
+    <string name="welcome_to_our_application">Welcome to our application.</string>
+    <string name="please_enjoy_your_stay_in_the_app">please enjoy your stay in the app</string>
+    <string name="go_to_shoe_list_screen">go to shoe list screen</string>
+    <string name="shoe_name">Shoe Name</string>
+    <string name="company_name">Company</string>
+    <string name="shoe_size">Shoe Size</string>
+    <string name="description">Description</string>
+    <string name="cancel">Cancel</string>
+    <string name="add">Add</string>
+    <string name="logout">Logout</string>
+    <string name="you_are_about_to_see_list_of_shoes_to_add_a_new_shoe_please_click_the_floating_button_if_you_logout_you_have_three_dots_at_the_top_right_corner_click_them_to_be_able_to_see_the_logout_button">you are about to see list of shoes , to add a new shoe please click the floating button, if you logout you have three dots at the top right corner click them to be able to see the logout button</string>
+    <string name="to_continue_please_press_the_button_down_there">To continue please press the button down there</string>
+    <string name="go_to_shoe_list">Go to shoe list</string>
+</resources>
