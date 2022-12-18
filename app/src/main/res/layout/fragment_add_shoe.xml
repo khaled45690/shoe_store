@@ -6,7 +6,10 @@
     xmlns:tools="http://schemas.android.com/tools"
 
     tools:context=".ui.AddShoe.AddShoeFragment">
-
+    <data>
+        <variable name="ShoeListViewModel" type="com.example.shoe_store.SharedShoeListViewModel"/>
+        <variable name="view" type="android.view.View"/>
+    </data>
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -30,6 +33,7 @@
             android:layout_width="250dp"
             android:layout_height="41dp"
             android:ems="10"
+            android:text='@={ShoeListViewModel.newItem.shoeName}'
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.902"
@@ -57,6 +61,7 @@
             android:layout_height="40dp"
             android:layout_marginTop="64dp"
             android:ems="10"
+            android:text='@={ShoeListViewModel.newItem.companyName}'
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.975"
@@ -82,6 +87,7 @@
             android:layout_width="250dp"
             android:layout_height="40dp"
             android:ems="10"
+            android:text='@={ShoeListViewModel.newItem.shoeSize}'
             android:inputType="number"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -108,6 +114,7 @@
             android:layout_width="250dp"
             android:layout_height="40dp"
             android:ems="10"
+            android:text='@={ShoeListViewModel.newItem.description}'
             android:inputType="textEmailAddress"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -115,26 +122,31 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/shoeSizetextField"
             app:layout_constraintVertical_bias="0.143" />
-
+        <!-- cancel function should be in addShoe viewModel not activityViewModel
+         But there is no need to create View model for just one function-->
         <Button
             android:id="@+id/cancelButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/cancel"
             android:textSize="20sp"
+            android:onClick="@{()->ShoeListViewModel.cancelButtonFunc(view)}"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.216"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/descriptionTextField"
             app:layout_constraintVertical_bias="0.375" />
-
+        <!-- cancel function should be in addShoe viewModel not activityViewModel
+          But there is no need to create View model for just one function-->
         <Button
             android:id="@+id/addButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/add"
             android:textSize="20sp"
+            android:onClick="@{()->ShoeListViewModel.addItem(view)}"
+
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.484"

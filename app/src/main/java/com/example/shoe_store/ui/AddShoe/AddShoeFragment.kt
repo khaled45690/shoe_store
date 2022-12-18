@@ -11,7 +11,6 @@ import com.example.shoe_store.R
 import com.example.shoe_store.SharedShoeListViewModel
 import com.example.shoe_store.databinding.FragmentAddShoeBinding
 
-import com.google.android.material.snackbar.Snackbar
 
 
 class AddShoeFragment : Fragment() {
@@ -22,37 +21,17 @@ class AddShoeFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-
+    ): View {
+        var text : String
         _binding = FragmentAddShoeBinding.inflate(inflater, container, false)
+
         _binding!!.lifecycleOwner = this
 
         _binding!!.cancelButton.setOnClickListener { view->
             view.findNavController().navigate(R.id.shoeListFragment)
         }
-
-        _binding!!.addButton.setOnClickListener { view->
-            val shoeName : String = _binding!!.shoeNameTextField.text.toString()
-            val shoeSize : String = _binding!!.shoeSizetextField.text.toString()
-            val companyName : String = _binding!!.companyNameTextField.text.toString()
-            val description : String = _binding!!.descriptionTextField.text.toString()
-            if(shoeName.isNullOrBlank() ||shoeSize.isNullOrBlank() || companyName.isNullOrBlank() || description.isNullOrBlank()) {
-                Snackbar.make(
-                    view,
-                    "please make sure you full fill all text fields",
-                    Snackbar.LENGTH_LONG
-                )
-                    .setAction("CLOSE") { }
-                    .setActionTextColor(resources.getColor(android.R.color.holo_red_light))
-                    .show()
-            }else{
-                sharedShoeListViewModel.addItem(shoeName , companyName , shoeSize , description)
-                _binding!!.invalidateAll()
-                view.findNavController().navigate(R.id.shoeListFragment)
-            }
-
-
-        }
+        _binding!!.shoeListViewModel = sharedShoeListViewModel
+        _binding!!.view = _binding!!.root
 
         return _binding!!.root
     }
